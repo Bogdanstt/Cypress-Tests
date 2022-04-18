@@ -1,0 +1,18 @@
+{
+  "video": true,
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 4000,
+  "pageLoadTimeout": 9000,
+  "ignoreTestFiles": "**other/",
+  "retries": 1,
+  "env": {
+    "webdriveruni_homepage": "https://webdriveruniversity.com",
+    "first_name": "Sarah",
+    "last_name": "magdi"
+  },
+  "projectId": "haxrtm",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+}

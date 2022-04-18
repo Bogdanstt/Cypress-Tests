@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://webdriveruniversity.com",
+  "env": {
+    "first_name": "Bogdan"
+  },
+  "$schema": "https://on.cypress.io/cypress.schema.json"
+}
