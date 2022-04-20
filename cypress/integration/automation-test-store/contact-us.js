@@ -25,6 +25,5 @@ describe("Test Contact-Us form via Automation Test Store", function () {
       "have.text",
       "Your enquiry has been successfully sent to the store owner!"
     );
-    cy.wait(1000);
   });
 });

@@ -1,7 +1,9 @@
+import { accesHomepage } from "../../support/pageObject/automation-test-store/AutoStore-Homepage";
+
 ///<reference types="cypress-xpath" />
 describe("Insepct Automation Test Store using chain of commands", () => {
   it("Click on the first item using item header", () => {
-    cy.visit("https://automationteststore.com/");
+    accesHomepage(); //using a js imported function
     cy.xpath(
       "//*[@id='block_frame_featured_1769']/div/div[1]/div[1]/div/a"
     ).click();

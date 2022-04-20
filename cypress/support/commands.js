@@ -48,10 +48,13 @@ Cypress.Commands.add(
 );
 
 Cypress.Commands.add("navigateTo_wuHomepage", () => {
-  cy.visit("/");
+  cy.visit("https://webdriveruniversity.com/");
 });
 Cypress.Commands.add("navigateTo_wuCheckbox_Page", () => {
-  cy.visit("/" + "/Dropdown-Checkboxes-RadioButtons/index.html");
+  cy.visit(
+    "https://webdriveruniversity.com/" +
+      "/Dropdown-Checkboxes-RadioButtons/index.html"
+  );
 });
 
 //
