@@ -1,0 +1,174 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Where is your plane?",
+      "author": "Johny",
+      "id": 2
+    },
+    {
+      "title": "Want to learn testing",
+      "author": "bogdy",
+      "id": 3
+    },
+    {
+      "title": "Want to eat",
+      "author": "bog",
+      "id": 4
+    },
+    {
+      "title": ".2x4wwlbst1f.efcb9evb40d",
+      "author": "bog",
+      "id": 5
+    },
+    {
+      "title": ".2x2u2zsr855.kr9ll8s228",
+      "author": "bog",
+      "id": 6
+    },
+    {
+      "title": ".blmc0l4gf6t.m2t6zn1p55l",
+      "author": "bog",
+      "id": 7
+    },
+    {
+      "title": "93ft7txwp3f.vjtavb4arg",
+      "author": "bog",
+      "id": 8
+    },
+    {
+      "title": "1i4hfcvygl4zhjkh8q0u8h",
+      "author": "bog",
+      "id": 9
+    },
+    {
+      "title": "3od545rc5m3wvps0b4zb5",
+      "author": "bog",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "body": "fj0d7hj2xh94y6sufvttt",
+      "postId": 2,
+      "id": 10
+    },
+    {
+      "body": "caimcxzzzwle8ra4gjzrf7",
+      "postId": 9,
+      "id": 11
+    },
+    {
+      "body": "l6wg5mba4xhj7ii0lx88fk",
+      "postId": 7,
+      "id": 12
+    },
+    {
+      "body": "028a0bevrxgsn08z0p5pewk",
+      "postId": 9,
+      "id": 13
+    },
+    {
+      "body": "nbiwtxzpluoyn369y26lyo",
+      "postId": 8,
+      "id": 14
+    },
+    {
+      "body": "ywu31joth6ikqnvqnq3b2q",
+      "postId": 1,
+      "id": 15
+    },
+    {
+      "body": "6kgh8ljgxlsh7s79hsfzzs",
+      "postId": 1,
+      "id": 16
+    },
+    {
+      "body": "diwxoek7fp9q0u7cc3oir",
+      "postId": 5,
+      "id": 17
+    },
+    {
+      "body": "g09nfur8jdhjdqcfrt6pn",
+      "postId": 4,
+      "id": 18
+    },
+    {
+      "body": "tvy58z0qdeuf8v1y1zve",
+      "postId": 4,
+      "id": 19
+    },
+    {
+      "body": "uanrnaz38lryo406rpa4",
+      "postId": 2,
+      "id": 20
+    },
+    {
+      "body": "k3ewyunf2274tsken83xd",
+      "postId": 9,
+      "id": 21
+    },
+    {
+      "body": "ti9kjysl7r9xdjh76r5pdm",
+      "postId": 9,
+      "id": 22
+    },
+    {
+      "body": "0gmd13myov2axe75u6l71wo",
+      "postId": 5,
+      "id": 23
+    },
+    {
+      "body": "amfkypmuc4ckde00djgcd",
+      "postId": 2,
+      "id": 24
+    },
+    {
+      "body": "ldi1yqozsmj2ta0sin8zrf",
+      "postId": 6,
+      "id": 25
+    },
+    {
+      "body": "0jlzpu0yg7dbtrppo4base",
+      "postId": 9,
+      "id": 26
+    },
+    {
+      "body": "ub6r3hgbhdna0t2tml4g3e",
+      "postId": 4,
+      "id": 27
+    },
+    {
+      "body": "zlbn93tfnpih85jrsblyc",
+      "postId": 7,
+      "id": 28
+    },
+    {
+      "body": "kxjzxu8wbos4kjzmm6lunj",
+      "postId": 1,
+      "id": 29
+    },
+    {
+      "body": "6l9205d64f7nxs0khekdpq",
+      "postId": 9,
+      "id": 30
+    },
+    {
+      "body": "mmleu0oqn7fbd9ccs81me",
+      "postId": 1,
+      "id": 31
+    },
+    {
+      "body": "wrsj2a02chkro9y6yr6yg",
+      "postId": 3,
+      "id": 32
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
