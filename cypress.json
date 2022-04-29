@@ -10,6 +10,8 @@
     "first_name": "Sarah",
     "last_name": "magdi"
   },
+
+  "experimentalStudio": true,
   "projectId": "haxrtm",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
