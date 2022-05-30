@@ -1,4 +1,5 @@
 ///<reference types="cypress"/>
+
 describe("Test mouse actions via webdriveruni", () => {
   it("Scroll element into view", () => {
     cy.visit("https://webdriveruniversity.com");
@@ -27,14 +28,16 @@ describe("Test mouse actions via webdriveruni", () => {
         expect($el).to.have.css("background-color", "rgb(0, 255, 0)");
       });
   });
-  it.only("I should be able to hover over a specific element and click on first option in dropdown menu", () => {
+  it("I should be able to hover over a specific element and click on first option in dropdown menu", () => {
     cy.visit("https://webdriveruniversity.com");
     cy.get("#actions").invoke("attr", "target", "_self").click({ force: true });
     cy.get("#div-hover")
       .contains("Hover Over Me Third!")
       .realHover()
       .then((el) => {
-        cy.get("#div-hover > div:nth-child(3) > div > a:nth-child(2)").click();
+        cy.get("#div-hover > div:nth-child(3) > div > a:nth-child(2)").click({
+          force: true,
+        });
         cy.on("window:alert", (alertMessage) => {
           expect(alertMessage).to.equal("Well done you clicked on the link!");
         });

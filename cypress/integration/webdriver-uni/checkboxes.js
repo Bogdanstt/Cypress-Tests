@@ -3,7 +3,7 @@ describe("Verify checkboxes via webdriveruni", () => {
   beforeEach(() => {
     cy.navigateTo_wuCheckbox_Page();
     // cy.get("#dropdown-checkboxes-radiobuttons")
-    //   .invoke("attr", "target", "_self") // or invoke("removeAttr", "_taget")
+    //   .invoke("attr", "target", "_self") // or invoke("removeAttr", "_target")
     //   .click({ force: true });
   });
   it("Check and validate checkbox", () => {

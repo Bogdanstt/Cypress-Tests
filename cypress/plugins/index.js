@@ -21,7 +21,7 @@
 // promisified fs module
 const fs = require("fs-extra");
 const path = require("path");
-
+const cucumber = require("cypress-cucumber-preprocessor").default;
 function getConfigurationByFile(file) {
   const pathToConfigFile = path.resolve("cypress", "config", `${file}.json`);
 
@@ -32,12 +32,8 @@ function getConfigurationByFile(file) {
 module.exports = (on, config) => {
   // accept a configFile value or use development by default
   const file = config.env.configFile || "development";
+  //for BDD
+  on("file:preprocessor", cucumber());
 
   return getConfigurationByFile(file);
-};
-
-const cucumber = require("cypress-cucumber-preprocessor").default;
-
-module.exports = (on, config) => {
-  on("file:preprocessor", cucumber());
 };

@@ -10,7 +10,7 @@ describe("Insepct Automation Test Store using chain of commands", () => {
     cy.visit("https://automationteststore.com/");
     cy.get(".prdocutname").contains("Skinsheen Bronzer Stick").click();
   });
-  it.only("Click on the first item using text", () => {
+  it("Click on the first item using text", () => {
     cy.visit("https://automationteststore.com/");
     cy.get(".prdocutname")
       .contains("Skinsheen Bronzer Stick")

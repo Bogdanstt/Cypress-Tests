@@ -1,6 +1,1 @@
-{
-  "env": {
-    "first_name": "lary"
-  },
-  "$schema": "https://on.cypress.io/cypress.schema.json"
-}
+{}

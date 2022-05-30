@@ -1,7 +1,3 @@
 {
   "baseUrl": "https://automationteststore.com/",
-  "env": {
-    "first_name": "Snd"
-  },
-  "$schema": "https://on.cypress.io/cypress.schema.json"
 }
