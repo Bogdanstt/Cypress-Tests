@@ -1,11 +1,15 @@
 ///<reference types="cypress"/>
 describe("Verify checkboxes via webdriveruni", () => {
   beforeEach(() => {
-    cy.navigateTo_wuCheckbox_Page();
-    // cy.get("#dropdown-checkboxes-radiobuttons")
-    //   .invoke("attr", "target", "_self") // or invoke("removeAttr", "_target")
-    //   .click({ force: true });
+    cy.visit(
+      "https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html"
+    );
   });
+
+  // cy.get("#dropdown-checkboxes-radiobuttons")
+  //   .invoke("attr", "target", "_self") // or invoke("removeAttr", "_target")
+  //   .click({ force: true });
+
   it("Check and validate checkbox", () => {
     cy.get("#checkboxes > :nth-child(1) > input").as("option-1");
     cy.get("@option-1").check().should("be.checked");
@@ -21,7 +25,7 @@ describe("Verify checkboxes via webdriveruni", () => {
   });
 
   /* ==== Test Created with Cypress Studio ==== */
-  it('cypress-studio-test', function() {
+  it("cypress-studio-test", function () {
     /* ==== Generated with Cypress Studio ==== */
     cy.get('[value="green"]').check();
     cy.get('[value="blue"]').check();

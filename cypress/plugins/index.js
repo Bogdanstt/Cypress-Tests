@@ -19,21 +19,13 @@
 // };
 
 // promisified fs module
-const fs = require("fs-extra");
-const path = require("path");
-const cucumber = require("cypress-cucumber-preprocessor").default;
-function getConfigurationByFile(file) {
-  const pathToConfigFile = path.resolve("cypress", "config", `${file}.json`);
 
-  return fs.readJson(pathToConfigFile);
-}
+// const cucumber = require("cypress-cucumber-preprocessor").default;
 
 // plugins file
 module.exports = (on, config) => {
   // accept a configFile value or use development by default
-  const file = config.env.configFile || "development";
+  // const file = config.env.configFile || "development";
   //for BDD
-  on("file:preprocessor", cucumber());
-
-  return getConfigurationByFile(file);
+  // on("file:preprocessor", cucumber());
 };

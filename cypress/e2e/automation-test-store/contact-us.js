@@ -1,10 +1,12 @@
 ///<reference types="cypress-xpath" />
 describe("Test Contact-Us form via Automation Test Store", function () {
   before(() => {
+    console.log(cy.url());
+    cy.visit("/");
     cy.fixture("userDetails").as("user");
   });
   it("Should be able to submit a succesful submission via the contacts us form", () => {
-    cy.visit("https://automationteststore.com/");
+    // cy.visit("https://automationteststore.com/");
     cy.get(
       "#footer > footer > section.footerlinks > div > div.pull-left > div > ul > li:nth-child(5) > a"
     )

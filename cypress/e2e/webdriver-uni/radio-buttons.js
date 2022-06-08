@@ -13,11 +13,9 @@ describe("Verify radio buttons via webdriveruni", () => {
   it("Validate the state of specific radio buttons", () => {
     cy.get('[value="lettuce"]').should("not.be.checked");
     cy.get('[value="pumpkin"]').should("be.checked");
-
     cy.get('[value="lettuce"]').check();
     cy.get('[value="lettuce"]').should("be.checked");
     cy.get('[value="pumpkin"]').should("not.be.checked");
-
     cy.get('[value="cabbage"]').should("be.disabled");
   });
 });
