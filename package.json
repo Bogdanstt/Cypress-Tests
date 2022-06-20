@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run_spec": "npx cypress run --spec cypress/integration/webdriver-uni/mouse-action.js",
+    "cy:run_spec": "npx cypress run --spec cypress/e2e/webdriver-uni/mouse-action.js",
     "cy:run_allbrowsers": "npm run cy:run_spec -- --browser chrome & npm run cy:run_spec -- --browser electron & npm run cy:run_spec -- --browser edge & npm run cy:run_spec -- --browser firefox",
     "triggerAllTest-headed": "npx cypress run --headed --browser edge",
-    "triggerAllTest-webdriveruni": "npx cypress run --spec cypress/integration/webdriver-uni/* --headless",
-    "triggerAllTest-autoTestStore": "npx cypress run --spec cypress/integration/automation-test-store/* --headless",
-    "triggerAllTest-autoTestStore-dashboard": "npx cypress run --spec cypress/integration/automation-test-store/* --record --key 1cd01925-701c-42ec-8fad-ecab986ddd34",
+    "triggerAllTest-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/* --headless",
+    "triggerAllTest-autoTestStore": "npx cypress run --spec cypress/e2e/automation-test-store/* --headless",
+    "triggerAllTest-autoTestStore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/* --record --key 1cd01925-701c-42ec-8fad-ecab986ddd34",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
     "delete-all-reports": "rm -rf cypress/results/* || true",
@@ -17,7 +17,8 @@
     "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
     "cypress-regression-pack": "npm run delete-all-reports && npm run delete-mochawesome-report && npx cypress run && npm run mochawesome-merge",
     "cypress-multi-browser": "npm run triggerAllTest-autoTestStore -- --browser electron --headed & npm run triggerAllTest-autoTestStore -- --browser edge --headed ",
-    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/integration/features/*.feature -b edge"
+    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/e2e/features/*.feature -b edge",
+    "cy:run_qaclickacademy": "npx cypress run  --spec cypress/e2e/other/qaclickacademy.js"
   },
   "author": "bgd",
   "license": "ISC",
