@@ -24,14 +24,12 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.4.7",
-    "cypress-file-upload": "^5.0.8",
-    "cypress-real-events": "^1.7.0",
     "npx": "^10.2.2"
   },
   "devDependencies": {
     "cypress": "^10.1.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-multi-reporters": "^1.6.0",
+    "cypress-multi-reporters": "^1.6.1",
     "cypress-xpath": "^1.6.2",
     "mocha": "^10.0.0",
     "mocha-junit-reporter": "^2.0.2",
