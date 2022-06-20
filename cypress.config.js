@@ -23,6 +23,7 @@ module.exports = defineConfig({
       // on("file:preprocessor", cucumber());
       // return require("./cypress/plugins/index.js")(on, config);
     },
+    baseUrl: "https://www.rahulshettyacademy.com/AutomationPractice/#",
     excludeSpecPattern: "**other/",
     experimentalSessionAndOrigin: true,
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
