@@ -27,6 +27,7 @@
     "@cypress/webpack-preprocessor": "latest",
     "autoprefixer": "^10.4.7",
     "cypress": "latest",
+    "esbuild": "^0.14.47",
     "npx": "^10.2.2"
   },
   "cypress-cucumber-preprocessor": {
