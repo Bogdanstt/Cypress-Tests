@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
 describe("Verify radio buttons via webdriveruni", () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit("https://webdriveruniversity.com");
     cy.get("#dropdown-checkboxes-radiobuttons")
       .invoke("attr", "target", "_self")

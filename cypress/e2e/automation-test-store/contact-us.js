@@ -2,7 +2,7 @@
 describe("Test Contact-Us form via Automation Test Store", function () {
   before(() => {
     console.log(cy.url());
-    cy.visit("/");
+    cy.visit("https://automationteststore.com/");
     cy.fixture("userDetails").as("user");
   });
   it("Should be able to submit a succesful submission via the contacts us form", () => {

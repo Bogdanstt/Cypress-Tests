@@ -4,7 +4,7 @@ describe("Update Request", () => {
   it("Update an existing post via /post api", () => {
     cy.request({
       method: "PUT",
-      url: "http://localhost:3000/posts/2",
+      url: "https://jsonplaceholder.typicode.com/posts/2",
       body: {
         title: "Where is your plane?",
         author: "Johny",

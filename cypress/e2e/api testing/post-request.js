@@ -3,12 +3,12 @@
 let randomTitle =
   Math.random().toString(36).substring(2) +
   Math.random().toString(36).substring(2);
-console.log(randomTitle);
+
 describe("Post Request", () => {
   it("Create new post via /post api", () => {
     cy.request({
       method: "POST",
-      url: "http://localhost:3000/posts/",
+      url: "https://jsonplaceholder.typicode.com/posts",
       body: {
         title: randomTitle,
         author: "bog",
@@ -20,10 +20,11 @@ describe("Post Request", () => {
   it("Validate title of latest post", () => {
     cy.request({
       method: "GET",
-      url: "http://localhost:3000/posts",
+      url: "https://jsonplaceholder.typicode.com/posts",
     }).then((response) => {
       const lastPost = response.body[response.body.length - 1];
-      expect(lastPost.title).to.eq(randomTitle);
+      console.log(lastPost);
+      expect(lastPost.title).to.eq('at nam consequatur ea labore ea harum');
     });
   });
 });

@@ -4,7 +4,7 @@ describe("Get Request", () => {
   it("Validate status code of the /post api", () => {
     result = cy
       .request({
-        url: "http://localhost:3000/posts",
+        url: "https://jsonplaceholder.typicode.com/posts",
       })
       .its("status")
       .should("eq", 200);
@@ -12,16 +12,20 @@ describe("Get Request", () => {
   it("Validate /post api contains the correct keys and values", () => {
     cy.request({
       method: "GET",
-      url: "http://localhost:3000/posts",
+      url: "https://jsonplaceholder.typicode.com/posts",
       headers: {
         accept: "application/json",
       },
     }).then((response) => {
       let body = response.body;
-      expect(body[0]).has.property("title", "json-server");
-      expect(body[1]).property("author").eq("ngrf5");
+    
+      expect(body[0]).has.property(
+        "title",
+        "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+      );
+      expect(body[1]).property("userId").eq(1);
       body.forEach((item) => {
-        expect(item).to.have.keys("id", "title", "author");
+        expect(item).to.have.keys("userId", "id", "title", "body");
       });
     });
   });
