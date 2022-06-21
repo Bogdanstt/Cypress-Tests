@@ -3,7 +3,7 @@ module.exports = defineConfig({
   video: true,
   chromeWebSecurity: false,
   defaultCommandTimeout: 4000,
-  pageLoadTimeout: 9000,
+  pageLoadTimeout: 29000,
   env: {
     webdriveruni_homepage: "https://webdriveruniversity.com",
     first_name: "Sarah",
