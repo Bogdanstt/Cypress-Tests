@@ -1,25 +1,64 @@
-name: Cypress tests
+name: Cypress Tests with Install Job and UI Chrome Job x 5
+
 on: [push]
+
 jobs:
-  cypress-run:
-    name: Cypress run
-    runs-on: ubuntu-20.04
+  install:
+  # ...
+
+  ui-chrome-tests:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    needs: install
+    strategy:
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        containers: [1, 2, 3, 4, 5]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress run
+      - name: Download the build folders
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+
+      - name: "UI Tests - Chrome"
         uses: cypress-io/github-action@v4
         with:
-          spec: cypress/e2e/other/qaclickacademy.js
-      - uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-      # Test run video was always captured, so this action uses "always()" condition
-      - uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: cypress-videos
-          path: cypress/videos
+          # we have already installed all dependencies above
+          install: false
+          start: yarn start:ci
+
+          browser: chrome
+
+          parallel: true
+          group: "UI - Chrome"
+          spec: cypress/e2e/**/*
+# name: Cypress tests
+# on: [push]
+# jobs:
+#   cypress-run:
+#     name: Cypress run
+#     runs-on: ubuntu-20.04
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+
+#       - name: Cypress run
+#         uses: cypress-io/github-action@v4
+#         with:
+#           spec: cypress/e2e/other/qaclickacademy.js
+#       - uses: actions/upload-artifact@v2
+#         if: failure()
+#         with:
+#           name: cypress-screenshots
+#           path: cypress/screenshots
+#       # Test run video was always captured, so this action uses "always()" condition
+#       - uses: actions/upload-artifact@v2
+#         if: always()
+#         with:
+#           name: cypress-videos
+#           path: cypress/videos
