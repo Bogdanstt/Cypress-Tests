@@ -10,8 +10,7 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v4
-        with:
-          spec: cypress/e2e/other/qaclickacademy.js
+
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
