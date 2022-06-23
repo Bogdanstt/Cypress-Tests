@@ -9,5 +9,5 @@ workflows:
           requires:
             - cypress/install
           parallel: true
-          parallelism: 2
-          group: 2 machines
+          parallelism: 8
+         
