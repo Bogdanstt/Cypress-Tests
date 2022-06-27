@@ -14,7 +14,7 @@ describe("Test  spys and stubs ", () => {
     expect(spy).to.be.called;
     expect(spyWith).to.be.calledWith("bogdan");
   });
-  it.only("Stub on a function and its return value ", () => {
+  it("Stub on a function and its return value ", () => {
     const logging = {
       clg(message) {
         cy.log("Hi there " + message);

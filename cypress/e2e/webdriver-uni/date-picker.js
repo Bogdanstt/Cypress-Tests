@@ -3,7 +3,7 @@
 import { isInteger, isNumber } from "lodash";
 
 describe("Test datepicker via webdriveruni", () => {
-  it.only("Select date from the datepicker", () => {
+  it("Select date from the datepicker", () => {
     cy.visit("http://webdriveruniversity.com/");
     cy.get("#datepicker").invoke("removeAttr", "target").click({ force: true });
     cy.get("#datepicker").click();

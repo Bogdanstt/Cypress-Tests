@@ -1,8 +1,11 @@
 ///<reference types="cypress"/>
 describe("Handle js alert", () => {
+  beforeEach(() => {
+    cy.visit("https://webdriveruniversity.com");
+  });
   it("Confirm js alert contains the correct text", () => {
     //cy.visit("https://webdriveruniversity.com/Contact-Us/contactus.html");
-    cy.visit("https://webdriveruniversity.com");
+
     cy.get("#popup-alerts")
       .invoke("attr", "target", "_self") // or invoke("removeAttr", "target")
       .click({ force: true });
@@ -12,7 +15,6 @@ describe("Handle js alert", () => {
     });
   });
   it("Validate js confirm alert box works correctly when clicking ok", () => {
-    cy.visit("https://webdriveruniversity.com");
     cy.get("#popup-alerts")
       .invoke("attr", "target", "_self") // or invoke("removeAttr", "target")
       .click({ force: true });
@@ -23,7 +25,6 @@ describe("Handle js alert", () => {
     cy.get("#confirm-alert-text").contains("You pressed OK!");
   });
   it("Validate js confirm alert box works correctly when clicking cancel", () => {
-    cy.visit("https://webdriveruniversity.com");
     cy.get("#popup-alerts")
       .invoke("attr", "target", "_self") // or invoke("removeAttr", "target")
       .click({ force: true });
@@ -33,8 +34,7 @@ describe("Handle js alert", () => {
     });
     cy.get("#confirm-alert-text").contains("You pressed Cancel!");
   });
-  it.only("Validate js confirm alert box using a stub", () => {
-    cy.visit("https://webdriveruniversity.com");
+  it("Validate js confirm alert box using a stub", () => {
     cy.get("#popup-alerts")
       .invoke("attr", "target", "_self") // or invoke("removeAttr", "target")
       .click({ force: true });
@@ -46,8 +46,26 @@ describe("Handle js alert", () => {
       .click()
       .then(() => {
         expect(stub.getCall(0)).to.be.calledWith("Press a button!");
-      console.log(stub.getCall(0));
+        console.log(stub.getCall(0));
       });
-    
+  });
+  it("Check if cypress waits for link to apear and click it after", () => {
+    cy.on("uncaught:exception", () => {
+      return false;
+    });
+    cy.get("#popup-alerts")
+      .invoke("attr", "target", "_self") // or invoke("removeAttr", "target")
+      .click({ force: true });
+    cy.get("#button3").click();
+    cy.wait(5000);
+    cy.get("#button1")
+      .click()
+      .then(() => {
+        cy.get(".modal-title").should(
+          "have.text",
+          "Well Done For Waiting....!!!"
+        );
+        cy.contains("Close").click();
+      });
   });
 });

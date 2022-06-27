@@ -24,7 +24,7 @@ describe("Post Request", () => {
     }).then((response) => {
       const lastPost = response.body[response.body.length - 1];
       console.log(lastPost);
-      expect(lastPost.title).to.eq('at nam consequatur ea labore ea harum');
+      expect(lastPost.title).to.eq("at nam consequatur ea labore ea harum");
     });
   });
 });

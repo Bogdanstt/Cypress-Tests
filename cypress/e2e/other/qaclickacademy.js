@@ -2,7 +2,7 @@ describe(
   "Practice testing on qaclickcademy.com practice site",
   {
     baseUrl: "https://www.rahulshettyacademy.com/AutomationPractice",
-    waitForAnimations: false,
+    
   },
   () => {
     beforeEach(() => {

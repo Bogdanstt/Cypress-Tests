@@ -2,7 +2,7 @@
 describe("Test sessions  via Automation Test Store", function () {
   beforeEach(() => {
     const name = "webdriveruni";
-    const password = "webdriveruni";
+    const password = Cypress.env("password");
     cy.session(
       [name, password],
       () => {

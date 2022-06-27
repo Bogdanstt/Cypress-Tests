@@ -27,7 +27,7 @@ describe("Use cy.request to make API requests", () => {
       console.log(res);
     });
   });
-  it.only("Login in autoTestStore with request only and check if customer cookie exists", () => {
+  it("Login in autoTestStore with request only and check if customer cookie exists", () => {
     cy.request("https://automationteststore.com/index.php?rt=account/login")
       .its("body")
       .then((body) => {

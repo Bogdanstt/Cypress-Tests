@@ -10,7 +10,7 @@ describe("Verifying variables, cypress commands and jQuery commands", () => {
       expect(item.text()).is.eq("Makeup");
     });
   });
-  it.only("Validate properties of the Contact Us page", () => {
+  it("Validate properties of the Contact Us page", () => {
     cy.visit("https://automationteststore.com/index.php?rt=content/contact");
 
     //Cypress commands and chaining

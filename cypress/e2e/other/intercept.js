@@ -13,7 +13,7 @@ describe("Use cy.intercept to spy or stub requests and responses", () => {
   });
   it("Intercept the  request  and stub the request body", () => {
     cy.visit("https://jsonplaceholder.typicode.com");
-    cy.intercept({ method: "GET", path: "/posts", }, (req) => {
+    cy.intercept({ method: "GET", path: "/posts" }, (req) => {
       req.body = "BGD";
       req.headers["x-custom-headers"] = "added by cy.intercept";
       // req.reply({ plan: "starter" });
@@ -30,9 +30,9 @@ describe("Use cy.intercept to spy or stub requests and responses", () => {
       );
     });
   });
-  it.only("Intercept the  request  and modify the response", () => {
+  it("Intercept the  request  and modify the response", () => {
     cy.visit("https://jsonplaceholder.typicode.com");
-    cy.intercept({ method: "GET", path: "/posts",  }, (req) => {
+    cy.intercept({ method: "GET", path: "/posts" }, (req) => {
       // req.reply(201, "bgd", {"x-custom-headers" : "added by cy.intercept"});
       req.on("before:response", (res) => {
         // do something when the `before:response` event is triggered

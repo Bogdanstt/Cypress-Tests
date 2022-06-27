@@ -32,7 +32,7 @@ describe("Handling data via webdriveruni", () => {
       })
       .then(() => cy.log("The sum of age is: " + ageSum));
   });
-  it.only("Calculate and assert the  age of a given use based on last name", () => {
+  it("Calculate and assert the  age of a given use based on last name", () => {
     cy.get("#thumbnail-1 tr td:nth-child(2)").each((el) => {
       if (el.text().includes("Woods")) {
         expect(el.next().text()).to.equal("80");
