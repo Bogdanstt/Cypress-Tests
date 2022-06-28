@@ -35,13 +35,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Download the build folders
-        uses: actions/download-artifact@v2
-        with:
-          name: build
-          path: cypress/videos
-
       - name: "UI Tests - Chrome"
         uses: cypress-io/github-action@v4
         with:
