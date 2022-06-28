@@ -10,7 +10,7 @@
 #       - name: Cypress run
 #         uses: cypress-io/github-action@v4
 #         with:
-#           spec: cypress/e2e/other/qaclickacademy.js
+#           spec: cypress/e2e/*
 #       - uses: actions/upload-artifact@v2
 #         if: failure()
 #         with:
@@ -22,3 +22,55 @@
 #         with:
 #           name: cypress-videos
 #           path: cypress/videos
+name: Cypress Tests with installation job
+
+on: [push]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node16.13.2-chrome100-ff98
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Save build folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          if-no-files-found: error
+          path: build
+
+      - name: Cypress install
+        uses: cypress-io/github-action@v4
+        with:
+          # Disable running of tests within install job
+          runTests: false
+          build: yarn build
+          
+ ui-chrome-tests:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node16.13.2-chrome100-ff98
+    needs: install
+    strategy:
+      fail-fast: false
+      matrix:
+        # run copies of the current job in parallel
+        containers: [1, 2, 3, 4, 5]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download the build folders
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+
+      - name: 'UI Tests - Chrome'
+        uses: cypress-io/github-action@v4
+        with:
+          # we have already installed all dependencies above
+          browser: chrome
+          parallel: true
+          spec: cypress/e2e/*
