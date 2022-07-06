@@ -1,13 +1,14 @@
+///<reference types="cypress"/>
 describe(
   "Practice testing on qaclickcademy.com practice site",
   {
     baseUrl: "https://www.rahulshettyacademy.com/AutomationPractice",
-    
   },
   () => {
     beforeEach(() => {
       cy.visit("/");
     });
+
     it("Verify that radio buttons, autocomplete, dropdown menu and checkboxes can be used", () => {
       cy.get('[for="radio1"]').children().check().should("be.checked");
       cy.get('input[value="radio2"]').check().should("be.checked");

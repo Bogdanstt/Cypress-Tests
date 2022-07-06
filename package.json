@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:parallel": "cypress-parallel -s cy:run_other -t 2 -d",
+    "cy:parallel": "cypress-parallel -s cy:run -t 1 -d cypress/e2e/other/qa/ -r mochawesome",
     "cy:run": "cypress run",
-    "cy:run_other": "cypress run --spec cypress/e2e/other/*",
+    "cy:run_spec": "cypress run --spec cypress/e2e/other/qaclickacademy.js",
     "cy:run_allbrowsers": "npm run cy:run_spec -- --browser chrome & npm run cy:run_spec -- --browser electron & npm run cy:run_spec -- --browser edge & npm run cy:run_spec -- --browser firefox",
     "triggerAllTest-headed": "npx cypress run --headed --browser edge",
     "cy:run-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/* --headless",
