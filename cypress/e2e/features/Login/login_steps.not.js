@@ -1,3 +1,4 @@
+///<reference types="cypress"/>
 import {
   Before,
   Given,
@@ -33,6 +34,7 @@ And("I click on the login button", () => {
 Then(
   "I should be presented the following message: {word} {word}",
   (message, message2) => {
+    console.log(message, message2);
     expect(stub.getCall(0)).to.be.calledWith(message + " " + message2);
   }
 );

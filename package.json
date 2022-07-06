@@ -29,17 +29,21 @@
     "@testomatio/reporter": "^0.6.2",
     "autoprefixer": "^10.4.7",
     "cypress-parallel": "^0.9.1",
-    "esbuild": "^0.14.47",
+    "esbuild": "^0.14.48",
     "npx": "^10.2.2"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/e2e/features/**/*.{js,ts}"
+    "stepDefinitions": "cypress/e2e/features/**/*.{js,ts}",
+    "filterSpecs": true,
+    "messages.enabled": true,
+    "messagesOutput": "cucumber-messages.ndjson",
+    "jsonFormatter": "cucumber-json-formatter"
   },
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^11.3.0",
+    "@badeball/cypress-cucumber-preprocessor": "^11.3.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
-    "cypress": "^10.2.0",
+    "cypress": "^10.3.0",
     "cypress-multi-reporters": "^1.6.1",
     "cypress-xpath": "^2.0.0",
     "eslint-plugin-cypress": "^2.12.1",
