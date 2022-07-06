@@ -9,8 +9,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Cypress run
         uses: cypress-io/github-action@v4
-        with:
-          spec: cypress/e2e/*
+        # with:
+        #   spec: cypress/e2e/*
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
