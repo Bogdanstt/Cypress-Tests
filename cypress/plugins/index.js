@@ -1,8 +1,5 @@
 /// <reference types="cypress" />
 
-
-
-const testomatioReporter = require("@testomatio/reporter/lib/adapter/cypress-plugin");
 //For Cucumber Integration
 const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
@@ -20,6 +17,6 @@ module.exports = async (on, config) => {
       plugins: [nodePolyfills(), createEsbuildPlugin(config)],
     })
   );
-  testomatioReporter(on, config);
+
   return config;
 };
