@@ -39,11 +39,12 @@
     "jsonFormatter": "cucumber-json-formatter"
   },
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^12.0.1",
+    "@badeball/cypress-cucumber-preprocessor": "^12.1.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "cypress": "^10.6.0",
     "cypress-multi-reporters": "^1.6.1",
+    "cypress-slow-down": "^1.2.1",
     "cypress-xpath": "^2.0.1",
     "eslint-plugin-cypress": "^2.12.1",
     "mocha": "^10.0.0",

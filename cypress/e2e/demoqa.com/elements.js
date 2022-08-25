@@ -1,3 +1,8 @@
+import { slowCypressDown } from "cypress-slow-down";
+// slow down each command by the default amount
+// which is 1 second
+slowCypressDown(false);
+
 describe("Test elements on demoqa", () => {
   beforeEach(() => {
     cy.on("uncaught:exception", () => {
@@ -124,7 +129,7 @@ describe("Test elements on demoqa", () => {
       .selectFile("cypress/downloads/sampleFile.jpeg", { action: "drag-drop" });
     cy.get("#uploadedFilePath").should("include.text", "sampleFile.jpeg");
   });
-  it.only("Dynamic properties", () => {
+  it("Dynamic properties", () => {
     cy.get("#item-8").click();
     cy.get("#enableAfter").should("be.disabled");
     cy.get("#visibleAfter").should("not.exist");
