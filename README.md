@@ -36,4 +36,26 @@
 - [Dealing with non-breaking space in cypress commands and assertions](cypress\e2e\uitestingplayground\nbsp.js)
 - [Entering text into an input covered by other element](cypress\e2e\uitestingplayground\overlapped.js)
 - [Simple shawdow DOM example](cypress\e2e\uitestingplayground\shadowdom.js)
-- [Interacting with elements that are not visible(0 height/width, overlapped, max transparency, hidden, display:none, offscreen)](cypress\e2e\uitestingplayground\shadowdom.js)
+- [Interacting with elements that are not visible (zero height/width, overlapped, max transparency, hidden, display:none, offscreen)](cypress\e2e\uitestingplayground\shadowdom.js)
+
+### https://demoqa.com/
+- [Alert, confirm, prompt](cypress\e2e\demoqa.com\alerts.js)
+- [New tab, new window, new window message](cypress\e2e\demoqa.com\browserWindows.js)
+- [Textboxes, checkboxes, radio buttons, sortable web tables, mouse clicks, response status codes, upload/download, dynamic props](cypress\e2e\demoqa.com\elements.js)
+- [Full practice regitration form including interaction with elements and file upload](cypress\e2e\demoqa.com\forms.js)
+- [Using <code>contentDocument</code> to extract text from *body* . <code>Intercept</code> GET request to assert  *body* element](cypress\e2e\demoqa.com\frames.js)
+- [Sortable, selectable divs & resizable, droppable, dragabble, boxes](cypress\e2e\demoqa.com\interactions.js)
+- [Checking performance metrics: page load time, image load time, slowest image. Show the use of <code>window.performance</code>](cypress\e2e\demoqa.com\performanceMeasure.js)
+- [Widges: accordian, auto-complete, date&time picker, slider, tooltip, select menu ](cypress\e2e\demoqa.com\widgets.js)
+
+### API testing
+- [Widges: accordian, auto-complete, date&time picker, slider, tooltip, select menu ](cypress\e2e\demoqa.com\widgets.js)
+- [API  GET request](cypress\e2e\api-testing\get-request.js)
+- [API  POST request](cypress\e2e\api-testing\post-request.js)
+- [API  DELETE request](cypress\e2e\api-testing\delete-request.js)
+- [API  UPDATE request](cypress\e2e\api-testing\update-request.js)
+- [Create, assert, delete new comment with <code>request</code>API](cypress\e2e\api-testing\api-challenge.js)
+
+### https://www.rahulshettyacademy.com/AutomationPractice/
+
+- [Radio buttons, autocomplete, dropdown menu and checkboxes | New tab link check | Alert and confirm pop-ups | Traverse table | Visibilityof input | Iframe | Mouse hover](cypress\e2e\qa\qaclickacademy.js)
