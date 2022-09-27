@@ -59,3 +59,24 @@
 ### https://www.rahulshettyacademy.com/AutomationPractice/
 
 - [Radio buttons, autocomplete, dropdown menu and checkboxes | New tab link check | Alert and confirm pop-ups | Traverse table | Visibilityof input | Iframe | Mouse hover](cypress\e2e\qa\qaclickacademy.js)
+
+### [Example of <code>cy.intercept()</code>](cypress\e2e\other\intercept.js)
+- Intercept a request and stub the response body
+- Intercept the  request  and stub the request body. Show the use of *res.setThrottle / set.Delay*
+- Intercept the  request, modify and merge with the actual response
+
+### [ Example of <code>cy.request()</code>](cypress\e2e\other\request.js)
+- Use cy.request to make API requests.
+- Use cy.request to authenticate with csrftoken method and assert the *customer cookie*.
+- Use cy.request do a simple authentication.
+
+### [ Example of <code>cy.origin()</code> to navigate to another superdomain](cypress\e2e\other\same-origin-policy.js)
+- Validate visiting two different super-domains => *NOT WORKING*
+- Use cy.origin to visit different origin website and login (with *args Object*)
+
+### [ Example of <code>cy.session()</code>  ](cypress\e2e\other\same-origin-policy.js)
+- Part of Test 3 was generated with **Cypress Studio**
+
+### [Some example usage of <code>cy.stub()/spy()</code> ](cypress\e2e\other\spyStub.js)
+- Spy on a function and validate it arguments
+- Stub on a function and its return value
