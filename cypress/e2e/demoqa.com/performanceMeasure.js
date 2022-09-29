@@ -45,7 +45,7 @@ describe("Check some performance metrics", () => {
         );
         assert.isAtMost(
           slowestImg.duration,
-          400,
+          800,
           `image '${slowestImg.name}' should be loaded in reasonable time`
         );
       });
