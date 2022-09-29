@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 2,
+  "passes": 2,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:27:53.031Z",
+  "duration": 3652,
+  "file": "cypress\\e2e\\webdriver-uni\\hidden.js"
+}

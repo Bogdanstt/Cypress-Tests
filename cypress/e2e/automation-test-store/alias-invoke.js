@@ -43,7 +43,6 @@ describe("Alias and invoke tutorial", () => {
         nonSale += Number(el);
       });
       totalProductsValue = nonSale;
-      console.log(nonSale);
     });
     cy.get("@saleitemPrice")
       .then((priceText) => {
@@ -52,11 +51,10 @@ describe("Alias and invoke tutorial", () => {
           isonSale += Number(el);
         });
         totalProductsValue += isonSale;
-        console.log(isonSale);
       })
       .then(() => {
         cy.log("Total price of all products is: ", totalProductsValue);
-        expect(totalProductsValue).to.equal(648.5);
+        expect(totalProductsValue).to.equal(685.6);
       });
   });
 });

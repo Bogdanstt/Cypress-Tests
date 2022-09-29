@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 4,
+  "passes": 3,
+  "pending": 0,
+  "failures": 1,
+  "start": "2022-09-28T10:25:43.869Z",
+  "duration": 14556,
+  "file": "cypress\\e2e\\demoqa.com\\performanceMeasure.js"
+}

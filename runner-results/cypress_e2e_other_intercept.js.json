@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 3,
+  "passes": 3,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:26:12.750Z",
+  "duration": 7489,
+  "file": "cypress\\e2e\\other\\intercept.js"
+}

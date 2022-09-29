@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 1,
+  "passes": 1,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:24:50.151Z",
+  "duration": 17833,
+  "file": "cypress\\e2e\\automation-test-store\\contact-us.js"
+}

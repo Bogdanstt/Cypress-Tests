@@ -16,7 +16,7 @@ describe("Interact with buttons that are not visible", () => {
   it("Click on overlapped button", () => {
     cy.get("#overlappedButton").click({ force: true });
   });
-  it("Click on  button with zero transparency", () => {
+  it("Click on  button with max transparency", () => {
     cy.get("#transparentButton").should("not.be.visible").click(); // can be clicked without force:true
   });
   it("Click on  button that is hidden", () => {

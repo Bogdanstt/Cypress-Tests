@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 4,
+  "passes": 4,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:24:45.986Z",
+  "duration": 28929,
+  "file": "cypress\\e2e\\automation-test-store\\iterate-over-elements.js"
+}

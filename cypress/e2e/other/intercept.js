@@ -8,7 +8,7 @@ describe("Use cy.intercept to spy or stub requests and responses", () => {
     ).as("posts");
     cy.get("table:nth-of-type(1) a[href='/posts']").click();
     cy.wait("@posts").then((int) => {
-      console.log(int.response);
+      cy.log(int.response);
     });
   });
   it("Intercept the  request  and stub the request body", () => {
@@ -18,7 +18,7 @@ describe("Use cy.intercept to spy or stub requests and responses", () => {
       req.headers["x-custom-headers"] = "added by cy.intercept";
       // req.reply({ plan: "starter" });
       req.continue((res) => {
-        // res.setThrottle(1000);
+        res.setThrottle(500);
       });
     }).as("posts");
     cy.get("table:nth-of-type(1) a[href='/posts']").click();
@@ -38,9 +38,8 @@ describe("Use cy.intercept to spy or stub requests and responses", () => {
         // do something when the `before:response` event is triggered
       });
       req.continue((res) => {
-        res.setThrottle(1000);
-        res.setDelay(2000);
-        console.log(res);
+        res.setThrottle(5000);
+        res.setDelay(500);
       });
     }).as("posts");
     cy.get("table:nth-of-type(1) a[href='/posts']").click();

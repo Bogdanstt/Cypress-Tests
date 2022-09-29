@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 8,
+  "passes": 8,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:25:34.811Z",
+  "duration": 50562,
+  "file": "cypress\\e2e\\demoqa.com\\elements.js"
+}

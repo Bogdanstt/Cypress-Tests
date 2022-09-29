@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 16,
+  "passes": 16,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:28:06.191Z",
+  "duration": 13759,
+  "file": "cypress\\e2e\\webdriver-uni\\traversing-elements.js"
+}

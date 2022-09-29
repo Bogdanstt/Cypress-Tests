@@ -21,13 +21,14 @@ module.exports = defineConfig({
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
+    async setupNodeEvents(on, config) {
       // require("@cypress/code-coverage/task")(on, config);
-      require("./cypress/plugins/index.js")(on, config);
+
+      // Make sure to return the config object as it might have been modified by the plugin.
       return config;
     },
 
-    excludeSpecPattern: "**/*.not.js",
+    excludeSpecPattern: "**/*.{not.js, feature}",
     experimentalSessionAndOrigin: true,
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     supportFile: "cypress/support/e2e.js",

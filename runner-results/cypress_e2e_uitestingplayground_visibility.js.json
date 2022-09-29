@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 7,
+  "passes": 7,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:27:55.739Z",
+  "duration": 8003,
+  "file": "cypress\\e2e\\uitestingplayground\\visibility.js"
+}

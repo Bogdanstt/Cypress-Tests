@@ -5,7 +5,7 @@ import {
   When,
   And,
   Then,
-} from "@badeball/cypress-cucumber-preprocessor";
+} from "cypress-cucumber-preprocessor";
 
 let stub;
 

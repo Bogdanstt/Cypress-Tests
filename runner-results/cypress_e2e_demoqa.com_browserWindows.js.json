@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 2,
+  "passes": 2,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:25:11.606Z",
+  "duration": 18153,
+  "file": "cypress\\e2e\\demoqa.com\\browserWindows.js"
+}

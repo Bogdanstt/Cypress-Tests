@@ -1,0 +1,10 @@
+{
+  "suites": 1,
+  "tests": 1,
+  "passes": 1,
+  "pending": 0,
+  "failures": 0,
+  "start": "2022-09-28T10:27:59.522Z",
+  "duration": 3832,
+  "file": "cypress\\e2e\\webdriver-uni\\iframe.js"
+}

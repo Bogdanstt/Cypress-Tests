@@ -42,7 +42,7 @@ describe("Test sessions  via Automation Test Store", function () {
     ).click();
     /* ==== End Cypress Studio ==== */
   });
-  it("Test3", () => {
+  it("Actions provided by Cypress Studio", () => {
     cy.visit("https://automationteststore.com/");
     /* ==== Generated with Cypress Studio ==== */
     cy.get(

@@ -12,7 +12,6 @@ describe("Check some performance metrics", () => {
       .then((p) => {
         p.measure("pageLoad", "start-loading", "end-loading");
         const measure = p.getEntriesByName("pageLoad")[0];
-
         assert.isAtMost(measure.duration, 10000);
       });
   });
@@ -40,12 +39,10 @@ describe("Check some performance metrics", () => {
         const imgs = p
           .getEntriesByType("resource")
           .filter((x) => x.initiatorType === "img");
-        
         const slowestImg = imgs.reduce(
           (p, c) => (c.duration > p.duration ? c : p),
           { duration: 0 }
         );
-cy.focused
         assert.isAtMost(
           slowestImg.duration,
           400,
